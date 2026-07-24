@@ -74,3 +74,5 @@ This project demonstrates an end-to-end Blue Team workflow for detecting and res
 - Developed and validated a custom Wazuh detection rule.
 - Implemented automated defensive controls using Fail2Ban.
 - Strengthened practical Blue Team detection and response skills.
+
+Note: Although Hydra generated hundreds of failed SSH authentication attempts, the custom Wazuh Rule 100100 produced only 5 alerts. This is expected behavior because the rule is based on Wazuh's built-in correlation Rule 5551 (<if_sid>5551</if_sid>). Rather than generating an alert for every failed login attempt, Wazuh correlates multiple authentication failures into a smaller number of high-confidence brute-force detection events. This approach helps reduce alert fatigue while preserving meaningful security alerts.
