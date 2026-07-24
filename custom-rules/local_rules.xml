@@ -1,0 +1,14 @@
+<!-- Local rules -->
+
+<group name="local,sshd,">
+
+  <rule id="100100" level="12">
+    <if_sid>5551</if_sid>
+    <description>Possible SSH Brute Force Attack Detected</description>
+    <group>attack,authentication_failed,sshd,</group>
+    <mitre>
+      <id>T1110</id>
+    </mitre>
+  </rule>
+
+</group>
